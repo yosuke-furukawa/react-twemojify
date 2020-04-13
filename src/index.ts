@@ -8,7 +8,11 @@ export type options = {
   layout?: string;
 } & Options;
 
-export function twemojify(text: string, createImgElement: (opts: any) => ReactElement, opts?: options) {
+export function twemojify(
+  text: string,
+  createImgElement: (opts: any) => ReactElement,
+  opts?: options
+) {
   const size = (opts && opts.size) || 32;
   const style = opts && opts.style;
   const assetType = (opts && opts.assetType) || "svg";
@@ -33,7 +37,7 @@ export function twemojify(text: string, createImgElement: (opts: any) => ReactEl
       alt,
       key: idx,
       style,
-      ...opts
+      ...opts,
     });
     if (str) {
       result.push(str);
