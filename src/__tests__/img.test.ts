@@ -3,7 +3,7 @@ import assert from "assert";
 import React from "react";
 
 import { twemojify, options } from "../index";
-import { createImgElement } from "../amp-img";
+import { createImgElement } from "../img";
 
 type emojifiedItems = Array<
   | string
@@ -186,7 +186,7 @@ describe.each([
     ],
   ],
   [
-    "不可視文字が入った時は✨️(←ここにいる)amp-imgにせず無視するよ",
+    "不可視文字が入った時は✨️(←ここにいる)imgにせず無視するよ",
     undefined,
     [
       "不可視文字が入った時は",
@@ -197,7 +197,7 @@ describe.each([
         alt: "✨",
         class: "emoji",
       },
-      `${String.fromCodePoint(65039)}(←ここにいる)amp-imgにせず無視するよ`,
+      `${String.fromCodePoint(65039)}(←ここにいる)imgにせず無視するよ`,
     ],
   ],
 ] as testType)("emojify(%s) params %o", (input, options, expected) => {
@@ -220,6 +220,7 @@ describe.each([
         class: string;
         style?: React.CSSProperties;
       }>;
+      assert.strictEqual(elem.type, "img");
       assert.strictEqual(e.src, elem.props.src);
       assert.strictEqual(e.alt, elem.props.alt);
       assert.strictEqual(e.width, elem.props.width);
