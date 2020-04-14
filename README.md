@@ -1,5 +1,7 @@
 # react-twemojify
 
+![CI](https://github.com/yosuke-furukawa/react-twemojify/workflows/CI/badge.svg)
+
 A React Component converts emoji (like 🙆) to img tag.
 
 - Support web component img tag, like `amp-img`.
