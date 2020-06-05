@@ -41,7 +41,7 @@
     "prettier": "2.0.5",
     "react": "16.13.1",
     "ts-jest": "26.1.0",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
