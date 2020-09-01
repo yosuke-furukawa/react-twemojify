@@ -1,6 +1,6 @@
 {
   "name": "react-twemojify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "lightweight twemoji react component using twemoji-parser",
   "main": "lib/index.js",
   "scripts": {
