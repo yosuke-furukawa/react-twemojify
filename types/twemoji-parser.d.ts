@@ -1,7 +1,7 @@
 declare module "twemoji-parser" {
   type Options = {
     assetType?: "png" | "svg";
-    buildUrl?: (codepoints: string, assetType: string) => string,
+    buildUrl?: (codepoints: string, assetType: string) => string;
   };
   type EmojiEntity = {
     type: "emoji";
