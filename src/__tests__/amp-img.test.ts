@@ -202,11 +202,13 @@ describe.each([
   ],
   [
     "buildUrlでMAX CDN を差し替えるtest👩",
-    {buildUrl: (codepoints, assetType) => {
-      return assetType === "png"
-      ? `/emoji/72x72/${codepoints}.png`
-      : `/emoji/svg/${codepoints}.svg`;
-    }},
+    {
+      buildUrl: (codepoints, assetType) => {
+        return assetType === "png"
+          ? `/emoji/72x72/${codepoints}.png`
+          : `/emoji/svg/${codepoints}.svg`;
+      },
+    },
     [
       "buildUrlでMAX CDN を差し替えるtest",
       {
