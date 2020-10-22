@@ -200,6 +200,26 @@ describe.each([
       `${String.fromCodePoint(65039)}(←ここにいる)amp-imgにせず無視するよ`,
     ],
   ],
+  [
+    "buildUrlでMAX CDN を差し替えるtest👩",
+    {
+      buildUrl: (codepoints, assetType) => {
+        return assetType === "png"
+          ? `/emoji/72x72/${codepoints}.png`
+          : `/emoji/svg/${codepoints}.svg`;
+      },
+    },
+    [
+      "buildUrlでMAX CDN を差し替えるtest",
+      {
+        src: "/emoji/svg/1f469.svg",
+        width: 32,
+        height: 32,
+        alt: "👩",
+        class: "emoji",
+      },
+    ],
+  ],
 ] as testType)("emojify(%s) params %o", (input, options, expected) => {
   test(`should have img.emoji ${input} ${options}`, () => {
     const s = twemojify(input, createImgElement, options);

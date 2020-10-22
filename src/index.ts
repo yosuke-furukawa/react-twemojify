@@ -16,7 +16,8 @@ export function twemojify(
   const size = (opts && opts.size) || 32;
   const style = opts && opts.style;
   const assetType = (opts && opts.assetType) || "svg";
-  const emojis = parse(text, { assetType });
+  const buildUrl = opts && opts.buildUrl;
+  const emojis = parse(text, { assetType, buildUrl });
   const className = (opts && opts.class) || "emoji";
   const result: Array<string | React.ReactElement> = [];
   let position = 0;
