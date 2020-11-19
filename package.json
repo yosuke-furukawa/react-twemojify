@@ -4,7 +4,7 @@
   "description": "lightweight twemoji react component using twemoji-parser",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles --forceExit",
     "build": "tsc -d",
     "lint": "eslint . --ext .js,.ts",
     "lint-fix": "eslint . --ext .js,.ts --fix",
