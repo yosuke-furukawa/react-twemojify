@@ -17,4 +17,4 @@ export declare function createImgElement({ url, size, className, alt, key, layou
     alt: string;
     layout: string;
     "data-amp-auto-lightbox-disable": string;
-}, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)> | null) | (new (props: any) => React.Component<any, any, any>)>;
+}, string | React.JSXElementConstructor<any>>;
