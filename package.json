@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/yosuke-furukawa/react-twemojify#readme",
   "dependencies": {
-    "twemoji-parser": "^13.0.0"
+    "twemoji-parser": "^14.0.0"
   },
   "devDependencies": {
     "@types/jest": "27.5.0",
